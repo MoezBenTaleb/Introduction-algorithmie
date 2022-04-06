@@ -1,0 +1,45 @@
+Algorithme Viser
+
+Constantes (CHANCE : entier) <== 5;
+           (MIN : entier) <== 1;
+           (MAX : entier) <== 50;
+           
+var positionEnnemi,compteur,nombreAléatoire : entier;
+
+Début
+
+nombreAléatoire = random[MIN .. MAX];
+compteur = 0;
+positionEnnemi =0;
+
+répéter
+ tant que (nombreAléatoire <> positionEnnemi) faire
+   Afficher("Entrer la position de l'ennemi");
+   Saisir(positionEnnemi);
+   compteur++
+    Si positionEnnemi>nombreAléatoire alors
+      Afficher("Loupé! l'angle est plus petit,il vous reste",(CHANCE-compteur)," chances");
+      Sinon Si positionEnnemi<nombreAléatoire alors
+       Afficher("Loupé! C'est plus grand, il vous reste",(CHANCE-compteur)," chances");
+     Sinon 
+      Afficher("Touché! Bravo vous avez coulé votre ennemi en") 
+  fin Si 
+    fin Si
+  fin tant que
+jusqu'à compteur>= CHANCE
+Fin répéter
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
